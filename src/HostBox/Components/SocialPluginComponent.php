@@ -115,8 +115,8 @@ abstract class SocialPluginComponent extends Nette\UI\Control implements ISocial
                     }
 
                     if ($value !== NULL) {
-                        $prefix = (!$property->hasAnnotation('noPrefix') ? $prefix : '');
-                        $result[] = sprintf('%s%s="%s"', $prefix, $name, $value);
+                        $tmpPrefix = (!$property->hasAnnotation('noPrefix') ? $prefix : '');
+                        $result[] = sprintf('%s%s="%s"', $tmpPrefix, $name, $value);
                     }
                 }
             }
